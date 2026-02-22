@@ -24,6 +24,8 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-button.css">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -36,6 +38,19 @@
 </head>
 
 <body>
+  <!-- ======= Button Whatsapp ======= -->
+  <a id="robbu-whatsapp-button" class="right" target="_blank" 
+   href="https://api.whatsapp.com/send?phone=558196276609&text=Ol%C3%A1,%20gostaria%20de%20saber%20sobre..." 
+   style="position: fixed; z-index: 9999 !important;">
+   
+    <div class="rwb-tooltip" 
+        style="background-color: #fff !important;">
+      🚀 Estamos online no Whatsapp!
+    </div>
+
+  <img src="https://cdn.positus.global/production/resources/robbu/whatsapp-button/whatsapp-icon.svg">
+  </a>
+
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
@@ -143,7 +158,6 @@ Criamos uma ponte sólida para o mercado de trabalho, com foco em adolescentes d
       </div>
     </section><!-- End Services Section -->
 
-
     <!-- ======= Moments Section ======= -->
     <section id="moments" class="portfolio">
       <div class="container">
@@ -226,7 +240,29 @@ Criamos uma ponte sólida para o mercado de trabalho, com foco em adolescentes d
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script>
+  function simulateHover() {
+    const button = document.getElementById('robbu-whatsapp-button');
+    const tooltip = button.querySelector('.rwb-tooltip');
+
+    // Adiciona a classe de hover
+    button.classList.add('hover');
+    tooltip.style.opacity = '1';
+    tooltip.style.transform = 'translateX(0)';
+
+    // A seta será visível enquanto o tooltip estiver visível
+
+    // Remove a classe de hover após o efeito
+    setTimeout(() => {
+      button.classList.remove('hover');
+      tooltip.style.opacity = '0';
+      tooltip.style.transform = 'translateX(10%)';
+    }, 3000); // Tempo do efeito
+  }
+
+  // Simula o hover a cada 5 segundos
+  setInterval(simulateHover, 10000);
+  </script>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
